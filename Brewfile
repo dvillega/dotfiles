@@ -1,7 +1,8 @@
 tap "caskroom/cask"
 tap "caskroom/fonts"
 
-cask "1password"
+cask "dash"
+cask "spotify"
 cask "visual-studio-code"
 cask "docker"
 cask "firefox"
