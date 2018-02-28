@@ -19,5 +19,7 @@ brew "hub"
 brew "jq"
 brew "kubectl"
 brew "watch"
-brew "docker"
-brew "docker-compose"
+brew "httpie"
+brew "wget"
+
+# Docker for mac - todo
