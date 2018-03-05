@@ -21,5 +21,6 @@ brew "kubectl"
 brew "watch"
 brew "httpie"
 brew "wget"
+brew "bash-git-prompt"
 
 # Docker for mac - todo
