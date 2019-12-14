@@ -10,10 +10,6 @@ alias ll='ls -lah'
 PAGER=less
 export PAGER
 
-# Setup NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
 # Setup golang
 export GOPATH=$HOME/src/go
 export GOROOT=/usr/local/opt/go/libexec
@@ -28,23 +24,11 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 eval "$(pyenv init -)"
 
-alias prettyjson='python -m json.tool'
-
-
-
 # PyVenv alias
 alias activate='source ./env/bin/activate'
 
-export PYSPARK_PYTHON=python3
-export PYSPARK_DRIVER_PYTHON=python3
-
-# Docker Version Manager
-[ -f /usr/local/opt/dvm/dvm.sh ] && . /usr/local/opt/dvm/dvm.sh
-
 export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
-
-alias kpaul="curl 'http://www.kpauls.com/lunch-menu/' | grep 'h3 ' -A 1| cut -d '>' -f 2 | cut -d '<' -f 1|less"
 
 man() {
     env \
@@ -63,20 +47,6 @@ man() {
 #fi
 
 alias chill='spotify play uri spotify:user:1249660564:playlist:56aDI84ZQj3yGsBysnQ5Tk'
-
-# PS1 is a WIP - currently using both options below on diff comps
-
-# Git completion and prompt
-# source /usr/local/etc/bash_completion.d/git-completion.bash
-# source /usr/local/etc/bash_completion.d/git-prompt.sh
-# GIT_PS1_SHOWDIRTYSTATE=true
-# PS1='`if [ $? = 0 ]; then echo -e '💰'; else echo -e '🔥'; fi`  \[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[31m\] $(__git_ps1 " (%s)") \[\033[01;34m\]$\[\033[00m\] '
-
-if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
-  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
-fi
-
 
 # Add hub for git
 alias git=hub
