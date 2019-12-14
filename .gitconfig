@@ -64,9 +64,6 @@
 	#############
 	cl = clone
 	cld = clone --depth 1
-	clg = !sh -c 'git clone git://github.com/$1 $(basename $1)' -
-	clgp = !sh -c 'git clone git@github.com:$1 $(basename $1)' -
-	clgu = !sh -c 'git clone git@github.com:$(git config --get user.username)/$1 $1' -
 	#############
 	cp = cherry-pick
 	cpa = cherry-pick --abort
@@ -108,22 +105,18 @@
 	pr = prune -v
 	#############
 	ps = push
-	psf = push -f
 	psu = push -u
 	pst = push --tags
 	#############
 	pso = push origin
 	psao = push --all origin
-	psfo = push -f origin
 	psuo = push -u origin
 	#############
 	psom = push origin master
 	psaom = push --all origin master
-	psfom = push -f origin master
 	psuom = push -u origin master
 	psoc = !git push origin $(git bc)
 	psaoc = !git push --all origin $(git bc)
-	psfoc = !git push -f origin $(git bc)
 	psuoc = !git push -u origin $(git bc)
 	psdc = !git push origin :$(git bc)
 	#############
@@ -174,9 +167,6 @@
 	rsu = remote show upstream
 	rpo = remote prune origin
 	rpu = remote prune upstream
-	#############
-	rmf = rm -f
-	rmrf = rm -r -f
 	#############
 	s = status
 	sb = status -s -b
